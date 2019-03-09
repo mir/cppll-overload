@@ -1,0 +1,7 @@
+Icon?
+*.autosave
+*.slxc
+*.mex*
+*.asv
+*.m~
+slprj/*
