@@ -13,8 +13,8 @@ F_N = 1/(2*pi)*sqrt(K_N/tau_2N)
 dzeta = sqrt(K_N*tau_2N)/2
 
 % initial data
-v_1 = 0;
-tau_1 = -0.1*T_ref;
+v_1 = 4;
+tau_1 = -0.2*T_ref;
 if (tau_1 < -T_ref)
     errordlg('Impossible tau_1. Can not be lower than -T_ref.');
 end
