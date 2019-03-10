@@ -116,8 +116,20 @@ tau_v(max_step,:) = [tau_k1,v_k1];
 last_non_zero = find(pfd_output(:,1),1,'last');
 pfd_output = pfd_output(1:last_non_zero,:);
 
-plot(pfd_output(:,1),pfd_output(:,2));
-ylim([-1.1*I_p 1.1*I_p]);
-% paemel_simulation;
-sim('pfd_overload_simulink');
+%run simulink
+out = sim('pfd_overload_simulink');
+
+subplot(4,1,1);
+plot(simulink{1}.Values);
+ylim([-1.1 1.1]);
+
+subplot(4,1,2);
+plot(simulink{2}.Values);
+ylim([-1.1 1.1]);
+
+subplot(4,1,3);
+plot(simulink{3}.Values);
+
+subplot(4,1,4);
+plot(simulink{4}.Values);
                             
